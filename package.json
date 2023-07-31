@@ -1,0 +1,81 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "geometry",
+  "title": "Geometry",
+  "description": "It gives you the list of theorems and helps you with finding the areas and volumes.",
+  "icon": "command-icon.png",
+  "author": "Vaibhav-Satishkumar",
+  "categories": [
+    "Other"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "trigtable",
+      "title": "View Trigonometry Table",
+      "description": "See a table with important trigonometric ratios, and use it to practice and memorize them!",
+      "mode": "view"
+    },
+    {
+      "name": "terms",
+      "title": "Study Geometry Terms",
+      "subtitle": "Show a list of geometry terms.",
+      "description": "Shows a list of geometry terms with their definition and pictures from varsity.",
+      "mode": "view"
+    },
+    {
+      "name": "polygon",
+      "title": "Find Area of Regular Polygon",
+      "subtitle": "Input values to receive area in units.",
+      "description": "Find the area of any Regular N-gon",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "sides",
+          "placeholder": "Number of Sides",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "sidelength",
+          "placeholder": "Side length (units)",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "theorems",
+      "title": "View Theorems",
+      "subtitle": "Show a list of geometry theorems.",
+      "description": "Search theorems for the ones you need.",
+      "mode": "view"
+    },
+    {
+      "name": "practice",
+      "title": "Learn/Practice Geometry",
+      "subtitle": "Practice your geometry terms and theorems with AI.",
+      "description": "Enhance your geometry knowledge with Raycast AI. Input your definition and compare it with the generated terms.",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.56.0",
+    "@raycast/utils": "^1.9.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "1.0.5",
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.9",
+    "eslint": "^7.32.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
